@@ -8,6 +8,9 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using  Microsoft.AspNetCore.Http;
+using favorite_songs.Data;
+using Microsoft.EntityFrameworkCore;
 
 namespace favorite_songs
 {
@@ -24,6 +27,16 @@ namespace favorite_songs
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+            services.Configure<CookiePolicyOptions>(options => 
+            {
+                options.CheckConsentNeeded = context => true;
+                options.MinimumSameSitePolicy = SameSiteMode.None;
+            });
+
+            services.AddDbContext<SongsContext>(options => 
+                options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+
+            services.AddMvc();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
