@@ -14432,6 +14432,16 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "/home/jagp/favorite-songs/Views/Artists/CreateArtist.cshtml",
+      "TargetPath": "Views\\Artists\\CreateArtist.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/home/jagp/favorite-songs/Views/Artists/Index.cshtml",
+      "TargetPath": "Views\\Artists\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "/home/jagp/favorite-songs/Views/Home/Privacy.cshtml",
       "TargetPath": "Views\\Home\\Privacy.cshtml",
       "FileKind": "mvc"
