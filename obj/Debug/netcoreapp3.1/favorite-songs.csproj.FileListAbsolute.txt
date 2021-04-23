@@ -87,3 +87,5 @@
 /home/jagp/favorite-songs/bin/Debug/netcoreapp3.1/runtimes/unix/lib/netcoreapp2.1/System.Security.Principal.Windows.dll
 /home/jagp/favorite-songs/bin/Debug/netcoreapp3.1/runtimes/win/lib/netcoreapp2.1/System.Security.Principal.Windows.dll
 /home/jagp/favorite-songs/bin/Debug/netcoreapp3.1/runtimes/win/lib/netcoreapp2.0/System.Text.Encoding.CodePages.dll
+/home/jagp/favorite-songs/obj/Debug/netcoreapp3.1/Razor/Views/Artists/Index.cshtml.g.cs
+/home/jagp/favorite-songs/obj/Debug/netcoreapp3.1/Razor/Views/Artists/CreateArtist.cshtml.g.cs

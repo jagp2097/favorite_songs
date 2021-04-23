@@ -1,0 +1,42 @@
+@model IEnumerable<favorite_songs.Models.Artist>
+
+@{
+    ViewData["Title"] = "Artists - Index";
+}
+
+<h2>Artists Index</h2>
+
+<p>
+    <a asp-action="Create">Create new</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>@Html.DisplayNameFor(model => model.ArtistID)</th>
+            <th>@Html.DisplayNameFor(model => model.ArtistName)</th>
+            <th>@Html.DisplayNameFor(model => model.YearFundation)</th>
+            <th>@Html.DisplayNameFor(model => model.YearRetirement)</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (Artist artist in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(modelItem => artist.ArtistID)</td>
+                <td>@Html.DisplayFor(modelItem => artist.ArtistName)</td>
+                <td>@Html.DisplayFor(modelItem => artist.YearFundation)</td>
+                <td>
+                    @if (artist.YearRetirement == null) { <p>Artist is still active</p> } 
+                    else { @Html.DisplayFor(modelItem => artist.YearRetirement) }
+                </td>
+                <th>
+                    <a asp-action="Edit" asp-route-id="@artist.ArtistID">Edit</a>
+                    <a asp-action="Details" asp-route-id="@artist.ArtistID">Details</a>
+                    <a asp-action="Delete" asp-route-id="@artist.ArtistID">Delete</a>
+                </th>
+            </tr>
+        }
+    </tbody>
+</table>

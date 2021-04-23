@@ -1,0 +1,20 @@
+@{
+    ViewData["Title"] = "Create an Artist";
+}
+@using Microsoft.AspNetCore.Mvc.TagHelpers;
+@model favorite_songs.Models.Artist;
+
+<h4>Create a new artist</h4>
+
+<form asp-controller="Artists" asp-action="StoreArtist">
+    <label asp-for="@Model.ArtistName">Artist name</label>
+    <input asp-for="@Model.ArtistName" type="text">
+
+    <label asp-for="@Model.YearFundation">Year foundation</label>
+    <input asp-for="@Model.YearFundation" type="number">
+
+    <label asp-for="@Model.YearRetirement">Year retirement</label>
+    <input asp-for="@Model.YearRetirement" type="number">
+
+    <button type="submit">Create artist</button>
+</form>

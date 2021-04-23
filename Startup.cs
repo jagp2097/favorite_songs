@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using  Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Http;
 using favorite_songs.Data;
 using Microsoft.EntityFrameworkCore;
 
@@ -64,6 +64,11 @@ namespace favorite_songs
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
+
+                endpoints.MapControllerRoute(
+                    name: "Artists",
+                    pattern: "{controller=Artists}/{action=Index}/{artistId?}");
+
             });
         }
     }

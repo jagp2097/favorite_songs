@@ -7,10 +7,11 @@ namespace favorite_songs.Models
         public int ArtistID { get; set; }
         public string ArtistName { get; set; }
         public int YearFundation { get; set; }
-        public int YearRetirement { get; set; }
-        public bool IsActive { get; set; }
+        public int? YearRetirement { get; set; }
+        public int IsActive { get; set; }
 
-        List<Album> Albums { get; set; }
-        List<Song> Songs { get; set; } 
+        // Variables that holds the relation 1:M
+        public List<Album> Albums { get; set; }
+        public List<Song> Songs { get; set; } 
     }
 }
